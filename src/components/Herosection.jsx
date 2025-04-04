@@ -8,8 +8,9 @@ const PremiumPortfolioHeader = () => {
     "Business Manager"
   ];
   
-  const [currentJobIndex, setCurrentJobIndex] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
+  const [displayText, setDisplayText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
   const [isHovering, setIsHovering] = useState(false);
   const nameRef = useRef(null);
   
@@ -47,20 +48,37 @@ const PremiumPortfolioHeader = () => {
     return () => cancelAnimationFrame(particlesRef.current);
   }, []);
 
-  // Text animation effect
+  // Typing animation effect
   useEffect(() => {
-    const textInterval = setInterval(() => {
-      setIsVisible(false);
-      
-      setTimeout(() => {
-        setCurrentJobIndex((prev) => (prev + 1) % jobTitles.length);
-        setIsVisible(true);
-      }, 600);
-      
-    }, 3000);
+    let timeout;
     
-    return () => clearInterval(textInterval);
-  }, []);
+    if (isTyping) {
+      // Typing effect
+      if (displayText.length < jobTitles[currentIndex].length) {
+        timeout = setTimeout(() => {
+          setDisplayText(jobTitles[currentIndex].substring(0, displayText.length + 1));
+        }, 100); // Typing speed
+      } else {
+        // Pause at the end of typing before starting to delete
+        timeout = setTimeout(() => {
+          setIsTyping(false);
+        }, 1500);
+      }
+    } else {
+      // Deleting effect
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(displayText.substring(0, displayText.length - 1));
+        }, 50); // Deleting speed (slightly faster than typing)
+      } else {
+        // Move to next job title and start typing again
+        setCurrentIndex((currentIndex + 1) % jobTitles.length);
+        setIsTyping(true);
+      }
+    }
+    
+    return () => clearTimeout(timeout);
+  }, [displayText, isTyping, currentIndex]);
 
   // Name hover effect
   useEffect(() => {
@@ -114,33 +132,30 @@ const PremiumPortfolioHeader = () => {
       
       {/* Content container with subtle parallax effect */}
       <div className="relative z-20 text-center px-6">
-        {/* Interactive name with 3D effect */}
+        {/* Enhanced name with stronger visibility */}
         <div 
           ref={nameRef}
-          className="inline-block transition-all duration-300 cursor-pointer mb-6"
+          className="inline-block transition-all duration-300 cursor-pointer mb-8"
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          <h1 className="text-6xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gold-300" 
-              style={{ textShadow: "0 0 10px rgba(212, 175, 55, 0.3)" }}>
+          <h1 className="text-7xl md:text-8xl font-bold text-white" 
+              style={{ 
+                textShadow: "0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(212, 175, 55, 0.3)",
+                letterSpacing: "3px"
+              }}>
             RIDA LADIB
           </h1>
+          <div className="h-1 w-full bg-gradient-to-r from-gold-300 to-white mt-2"></div>
         </div>
         
-        {/* Animated job title container */}
-        <div className="h-16 mb-8">
-          <div className={`transition-all duration-600 transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-          }`}>
-            <div className="flex items-center justify-center">
-              <span className="text-white text-2xl font-light">/ </span>
-              <h2 className="mx-3 text-2xl md:text-3xl font-medium" 
-                  style={{ color: '#D4AF37', textShadow: "0 0 8px rgba(212, 175, 55, 0.5)" }}>
-                {jobTitles[currentJobIndex]}
-              </h2>
-              <span className="text-white text-2xl font-light"> /</span>
-            </div>
-          </div>
+        {/* Typing animation for job title */}
+        <div className="h-16 mb-8 flex justify-center items-center">
+          <h2 className="text-2xl md:text-3xl font-medium"
+              style={{ color: '#D4AF37', textShadow: "0 0 8px rgba(212, 175, 55, 0.5)" }}>
+            {displayText}
+            <span className="inline-block w-2 h-6 ml-1 bg-white animate-pulse"></span>
+          </h2>
         </div>
         
         {/* Decorative elements */}
