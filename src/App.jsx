@@ -1,9 +1,9 @@
 import React from 'react';
-import AnimatedPortfolioHeader from './components/Herosection';
+import PremiumPortfolioHeader from './components/Herosection';
 function App() {
   return (
 <>
-<AnimatedPortfolioHeader/>
+<PremiumPortfolioHeader/>
 </>
   );
 }
