@@ -5,7 +5,7 @@ export default function HeroSection() {
     <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
       {/* Red glow effect */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-20 blur-3xl rounded-full"></div>
-      
+
       <div className="max-w-6xl mx-auto w-full relative z-10">
         {/* Name and Title */}
         <div className="mb-16">
@@ -15,7 +15,7 @@ export default function HeroSection() {
             <p className="text-xl md:text-2xl">WEB DEVELOPER & DATA ANALYST</p>
           </div>
         </div>
-        
+
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="border-t-2 border-red-900 pt-4">
