@@ -2,8 +2,11 @@ import React from 'react';
 
 export default function HeroSection() {
   return (
-    <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto w-full">
+    <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
+      {/* Red glow effect */}
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-20 blur-3xl rounded-full"></div>
+      
+      <div className="max-w-6xl mx-auto w-full relative z-10">
         {/* Name and Title */}
         <div className="mb-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">RIDA LADIB</h1>
