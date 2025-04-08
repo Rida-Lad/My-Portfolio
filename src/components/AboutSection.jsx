@@ -12,7 +12,7 @@ export default function AboutSection() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
             WHO I AM
           </h2>
-          <p className="text-base md:text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
+          <p  className="text-base md:text-lg opacity-90 max-w-2xl mx-auto leading-relaxed">
             A disciplined Moroccan developer with a strong passion for technology and precision. 
             Specializing in web development and Python programming, I combine technical expertise 
             with a keen interest in the data analytics domain.
