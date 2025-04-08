@@ -21,7 +21,7 @@ export default function HeroSection() {
             <button className="px-8 py-3 bg-red-700 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105">
               View Projects
             </button>
-            <button className="px-8 py-3 border-2 border-red-700 text-white rounded-full font-bold hover:bg-red-700 hover:text-black transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-3 border-2 border-red-700 text-white rounded-full font-bold hover:bg-red-700 hover:text-white transition-all duration-300 transform hover:scale-105">
               Download CV
             </button>
           </div>
