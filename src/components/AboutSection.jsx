@@ -28,17 +28,17 @@ export default function AboutSection() {
             </h3>
             <div className="relative pl-8 border-l-2 border-red-600/30 space-y-8">
               <div className="relative">
-                <div className="absolute w-3 h-3 bg-red-600 rounded-full -left-[20px] top-2"></div>
+                <div className="absolute w-3 h-3 bg-red-400 rounded-full -left-[20px] top-2"></div>
                 <p className=" font-semibold">2023</p>
                 <p className="opacity-80">Scientific Baccalaureate in Physics</p>
               </div>
               <div className="relative">
-                <div className="absolute w-3 h-3 bg-red-600 rounded-full -left-[20px] top-2"></div>
+                <div className="absolute w-3 h-3 bg-red-400 rounded-full -left-[20px] top-2"></div>
                 <p className="font-semibold">2024</p>
                 <p className="opacity-80">ISTA NTIC SYBA - Digital Development</p>
               </div>
               <div className="relative">
-                <div className="absolute w-3 h-3 bg-red-600 rounded-full -left-[20px] top-2"></div>
+                <div className="absolute w-3 h-3 bg-red-400 rounded-full -left-[20px] top-2"></div>
                 <p className="font-semibold">2025-Current</p>
                 <p className="opacity-80">Jah Info Plus - Company Management</p>
                 <p className="opacity-80 mt-1">Self-Learning in Tech & Data Science</p>

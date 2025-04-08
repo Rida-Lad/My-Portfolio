@@ -11,8 +11,23 @@ import {
     SiExpress,
     SiDjango,
     SiMysql,
-    SiMongodb
+    SiMongodb,
+    SiFigma,
+    SiCanva,
+    SiAdobeillustrator,
+    SiAdobephotoshop,
+    SiBlender
 } from 'react-icons/si';
+import {
+    SiPostman,
+    SiGit,
+    SiGithub,
+    SiNpm
+} from 'react-icons/si';
+import { BiLogoVisualStudio } from "react-icons/bi";
+import { DiVisualstudio } from "react-icons/di";
+
+
 export default function SkillsSection() {
     return (
         <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
@@ -70,8 +85,14 @@ export default function SkillsSection() {
                                 Design
                             </h3>
                         </div>
-                        <div className="w-full md:w-3/4 flex flex-wrap gap-6">
-
+                        <div className="w-full md:w-3/4 flex overflow-x-auto md:overflow-visible pb-3 md:pb-0">
+                            <div className="flex flex-nowrap gap-4 md:gap-6 min-w-max">
+                                <SiFigma className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                <SiCanva className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                <SiAdobeillustrator className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                <SiAdobephotoshop className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                <SiBlender className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                            </div>
                         </div>
                     </div>
 
@@ -82,8 +103,26 @@ export default function SkillsSection() {
                                 Tools
                             </h3>
                         </div>
-                        <div className="w-full md:w-3/4 flex flex-wrap gap-6">
+                        <div className="w-full md:w-3/4 flex overflow-x-auto md:overflow-visible pb-3 md:pb-0">
+                            <div className="flex flex-nowrap gap-4 md:gap-6 min-w-max">
+                                {/* VS Code */}
+                                <BiLogoVisualStudio 
+                                className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                {/* VS Studio */}
+                                <DiVisualstudio className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
 
+                                {/* Postman */}
+                                <SiPostman className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+
+                                {/* Git */}
+                                <SiGit className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+
+                                {/* GitHub */}
+                                <SiGithub className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+
+                                {/* npm */}
+                                <SiNpm className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                            </div>
                         </div>
                     </div>
                 </div>
