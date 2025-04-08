@@ -52,19 +52,19 @@ export default function AboutSection() {
               Core Capabilities
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-600/50 transition-all duration-300">
+              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-400/50 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3">Web Development</h3>
                 <p className="opacity-80 text-sm">Building modern applications using JavaScript, Python, and cutting-edge frameworks</p>
               </div>
-              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-600/50 transition-all duration-300">
+              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-400/50 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3">Data Analysis & Visualization</h3>
                 <p className="opacity-80 text-sm">Transforming raw data into actionable insights through advanced analytics</p>
               </div>
-              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-600/50 transition-all duration-300">
+              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-400/50 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3">Business Management</h3>
                 <p className="opacity-80 text-sm">Strategic planning and operational optimization for tech-driven organizations</p>
               </div>
-              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-600/50 transition-all duration-300">
+              <div className="p-6 bg-black/50 backdrop-blur-sm border  rounded-xl border-red-400/50 transition-all duration-300">
                 <h3 className="text-xl font-bold mb-3">UI/UX Design</h3>
                 <p className="opacity-80 text-sm">Creating intuitive user experiences with modern design principles</p>
               </div>

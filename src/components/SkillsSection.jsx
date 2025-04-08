@@ -26,6 +26,8 @@ import {
 } from 'react-icons/si';
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio } from "react-icons/di";
+import { SiXampp } from "react-icons/si";
+
 
 
 export default function SkillsSection() {
@@ -122,6 +124,9 @@ export default function SkillsSection() {
 
                                 {/* npm */}
                                 <SiNpm className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+
+                                {/* XAMPP */}
+                                <SiXampp className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                             </div>
                         </div>
                     </div>
