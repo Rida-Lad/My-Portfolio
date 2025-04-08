@@ -6,33 +6,49 @@ export default function HeroSection() {
       {/* Red glow effect */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-40 blur-3xl rounded-full"></div>
 
-      <div className="max-w-6xl mx-auto w-full relative z-10 ">
+      <div className="max-w-6xl mx-auto w-full relative z-10">
         {/* Name and Title */}
-        <div className="mb-30 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 block">RIDA LADIB</h1>
-          <div className="flex items-center justify-center">
-            <div className="w-12 h-1 bg-red-900 mr-4"></div>
-            <p className="text-xl md:text-2xl block">WEB DEVELOPER & DATA ANALYST</p>
+        <div className="mb-16 text-center">
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 block tracking-tight">RIDA LADIB</h1>
+          <div className="flex items-center justify-center mb-12">
+            <p style={{ fontFamily: 'Cinzel' }} className="text-3xl md:text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-white to-red-600 font-medium">
+              WEB DEVELOPER & DATA ANALYST
+            </p>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap justify-center gap-6">
+            <button className="px-8 py-3 bg-red-700 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105">
+              View Projects
+            </button>
+            <button className="px-8 py-3 border-2 border-red-700 text-white rounded-full font-bold hover:bg-red-700 hover:text-black transition-all duration-300 transform hover:scale-105">
+              Download CV
+            </button>
           </div>
         </div>
 
-
         {/* Stats */}
-        <div className="flex flex-row flex-wrap items-center justify-center gap-8">
-          <div className=" pl-4 text-center">
-            <p className="text-lg font-bold">3</p>
-            <p className="text-sm text-gray-400">Certifications</p>
+        <div className="flex flex-row flex-wrap items-center justify-center gap-12 mt-24">
+          <div className="text-center relative">
+            <div className="absolute -top-6 -left-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <div className="absolute -bottom-6 -right-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <p className="text-4xl font-bold bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">3</p>
+            <p className="text-sm text-gray-400 uppercase tracking-widest mt-2">Certifications</p>
           </div>
-          <div className="border-l-4 border-red-900 pl-4 text-center">
-            <p className="text-lg font-bold">10</p>
-            <p className="text-sm text-gray-400">Projects</p>
+          <div className="text-center relative">
+            <div className="absolute -top-6 -left-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <div className="absolute -bottom-6 -right-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <p className="text-4xl font-bold bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">10</p>
+            <p className="text-sm text-gray-400 uppercase tracking-widest mt-2">Projects</p>
           </div>
-          <div className="border-l-4 border-red-900 pl-4 text-center">
-            <p className="text-lg font-bold">20+</p>
-            <p className="text-sm text-gray-400">Technologies</p>
+          <div className="text-center relative">
+            <div className="absolute -top-6 -left-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <div className="absolute -bottom-6 -right-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
+            <p className="text-4xl font-bold bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">20+</p>
+            <p className="text-sm text-gray-400 uppercase tracking-widest mt-2">Technologies</p>
           </div>
         </div>
       </div>
-    </section >
+    </section>
   );
 }
