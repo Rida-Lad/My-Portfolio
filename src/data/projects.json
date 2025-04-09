@@ -2,20 +2,20 @@
     {
       "id": 3,
       "featured": true,
-      "name": "Latest Project",
-      "description": "Most recent work with cutting-edge tech",
-      "image": "/project3.jpg",
-      "github": "https://github.com/yourusername/latest",
-      "tech": ["react", "typescript", "nextjs"]
+      "name": "EBook Store Landing Page",
+      "description": "Modern e-book store featuring a responsive bestsellers carousel with seamless mobile/desktop experience. Built with React, Tailwind CSS, and Lucide icons.",
+      "image": "/EBookStore.png",
+      "github": "https://github.com/Rida-Lad/E-BookStore",
+      "tech": ["ReactJs", "TailwindCSS"]
     },
     {
       "id": 2,
       "featured": true,
-      "name": "Mid Project",
-      "description": "Intermediate stage project",
-      "image": "/project2.jpg",
-      "github": "https://github.com/yourusername/mid",
-      "tech": ["python", "django"]
+      "name": "Interactive Presentation on SARL",
+      "description": "Interactive React-based presentation on SARL business structures in Morocco, featuring animated transitions, responsive design, and professional data visualization.",
+      "image": "/SLIDES_SARL.png",
+      "github": "https://github.com/Rida-Lad/Presentation-SARL-Slides-React_JS",
+      "tech": ["ReactJs", "TailwindCSS"]
     },
     {
       "id": 1,

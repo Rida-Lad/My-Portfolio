@@ -12,14 +12,14 @@ const ProjectCard = ({ project }) => {
             {/* Card content */}
             <div className="relative h-full bg-black/90 backdrop-blur-sm rounded-2xl p-6">
                 {/* Image container */}
-                <div className="relative overflow-hidden rounded-lg mb-4">
+                {/* <div className="relative overflow-hidden rounded-lg mb-4">
                     <img
                         src={project.image}
                         alt={project.name}
-                        className="w-full h-48 object-cover object-center transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-45 object-cover transition-transform hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
-                </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </div> */}
 
                 {/* Content */}
                 <div className="relative z-10">
