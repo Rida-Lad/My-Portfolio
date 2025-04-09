@@ -32,7 +32,7 @@ export default function HeroSection() {
           <div className="text-center relative">
             <div className="absolute -top-6 -left-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
             <div className="absolute -bottom-6 -right-6 w-16 h-16 border-2 border-red-600 rounded-full opacity-15"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">3</p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">4</p>
             <p className="text-sm text-gray-400 uppercase tracking-widest mt-2">Certifications</p>
           </div>
           <div className="text-center relative">
