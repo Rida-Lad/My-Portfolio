@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ProjectCard = ({ project }) => {
     return (
-        <div className="group relative p-px overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-red-900/50 hover:shadow-2xl">
+        <div className="group relative p-px overflow-hidden rounded-2xl transition-all duration-300 shadow-red-900/50 shadow-2xl">
             {/* Animated gradient background */}
             <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-transparent to-red-300 opacity-40 transition-opacity duration-300">
                 <div className="absolute -top-[50%] -left-[50%] w-[200%] h-[200%] animate-border-rotate bg-[conic-gradient(from_0deg,transparent_0_,theme(colors.red.600)_25%,transparent_50%)]"></div>
@@ -11,16 +11,6 @@ const ProjectCard = ({ project }) => {
 
             {/* Card content */}
             <div className="relative h-full bg-black/90 backdrop-blur-sm rounded-2xl p-6">
-                {/* Image container */}
-                {/* <div className="relative overflow-hidden rounded-lg mb-4">
-                    <img
-                        src={project.image}
-                        alt={project.name}
-                        className="w-full h-45 object-cover transition-transform hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                </div> */}
-
                 {/* Content */}
                 <div className="relative z-10">
                     <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text">
