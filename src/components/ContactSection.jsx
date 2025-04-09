@@ -14,19 +14,19 @@ export default function ContactSection() {
         </h2>
         
         <div className="flex flex-wrap justify-center gap-12 md:gap-24 mt-16">
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
-            <FaGithub className="w-16 h-16" />
+          <a href="https://github.com/Rida-Lad" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
+            <FaGithub className="w-16 h-16" />   
           </a>
           
-          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
+          <a href="https://linkedin.com/in/rida-ladib" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
             <FaLinkedin className="w-16 h-16" />
           </a>
           
-          <a href="mailto:your.email@gmail.com" className="text-red-300 hover:text-red-400 transition-colors">
+          <a href="mailto:ridlad7@gmail.com" className="text-red-300 hover:text-red-400 transition-colors">
             <SiGmail className="w-16 h-16" />
           </a>
           
-          <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
+          <a href="https://wa.me/+212605975668" target="_blank" rel="noopener noreferrer" className="text-red-300 hover:text-red-400 transition-colors">
             <FaWhatsapp className="w-16 h-16" />
           </a>
         </div>
