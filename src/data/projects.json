@@ -4,7 +4,6 @@
       "featured": true,
       "name": "EBook Store Landing Page",
       "description": "Modern e-book store featuring a responsive bestsellers carousel with seamless mobile/desktop experience. Built with React, Tailwind CSS, and Lucide icons.",
-      "image": "/EBookStore.png",
       "github": "https://github.com/Rida-Lad/E-BookStore",
       "tech": ["ReactJs", "TailwindCSS"]
     },
@@ -13,7 +12,6 @@
       "featured": true,
       "name": "Interactive Presentation on SARL",
       "description": "Interactive React-based presentation on SARL business structures in Morocco, featuring animated transitions, responsive design, and professional data visualization.",
-      "image": "/SLIDES_SARL.png",
       "github": "https://github.com/Rida-Lad/Presentation-SARL-Slides-React_JS",
       "tech": ["ReactJs", "TailwindCSS"]
     },
@@ -22,7 +20,6 @@
       "featured": true,
       "name": "Fitness App Landing Page",
       "description": " Interactive fitness platform featuring responsive program carousels, animated UI elements, and personalized workout tracking. Built with React, Tailwind CSS, and Swiper.js.",
-      "image": "/Fitness App.png",
       "github": "https://github.com/Rida-Lad/Fitness-app-landing-page",
       "tech": ["ReactJs", "TailwindCSS"]
     }
