@@ -12,18 +12,25 @@ const ProjectCard = ({ project }) => {
             {/* Card content */}
             <div className="relative h-full bg-black/90 backdrop-blur-sm rounded-2xl p-6">
                 {/* Content */}
-                <div className="relative z-10">
-                    <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text">
+                <div className="relative z-10 flex flex-col h-full">
+                    {/* Title with fixed 2-line height */}
+                    <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text 
+                                  line-clamp-2 h-[3.5rem] min-h-[3.5rem]">
                         {project.name}
                     </h3>
-                    <p className="text-gray-400 mb-4">{project.description}</p>
 
-                    {/* Tech stack */}
-                    <div className="flex flex-wrap gap-2 mb-6">
+                    {/* Description with fixed 4-line height */}
+                    <p className="text-gray-400 mb-4 line-clamp-4 h-[6rem] min-h-[6rem]">
+                        {project.description}
+                    </p>
+
+                    {/* Tech stack with dynamic 2-row wrapping */}
+                    <div className="flex flex-wrap gap-2 mb-6 overflow-hidden">
                         {project.tech.map((tech, index) => (
                             <span
                                 key={index}
-                                className="px-3 py-1 text-sm bg-gradient-to-r from-red-900/30 to-red-900/10 rounded-full backdrop-blur-sm border border-red-900/50"
+                                className="px-2 py-1 text-xs bg-gradient-to-r from-red-900/30 to-red-900/10 rounded-full 
+                                           backdrop-blur-sm border border-red-900/50 flex-shrink-0"
                             >
                                 {tech}
                             </span>
@@ -31,7 +38,7 @@ const ProjectCard = ({ project }) => {
                     </div>
 
                     {/* GitHub link */}
-                    <div className="flex items-center justify-between">
+                    <div className="mt-auto">
                         <a
                             href={project.github}
                             target="_blank"
@@ -57,7 +64,7 @@ const ProjectCard = ({ project }) => {
                 </div>
             </div>
 
-            {/* Add this to your tailwind.config.js */}
+            {/* Styles remain the same */}
             <style jsx global>{`
                 @keyframes border-rotate {
                 0% { transform: rotate(0deg); }
