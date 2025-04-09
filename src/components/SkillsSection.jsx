@@ -27,6 +27,8 @@ import {
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio } from "react-icons/di";
 import { SiXampp } from "react-icons/si";
+import { RiTailwindCssFill } from "react-icons/ri";
+
 
 
 
@@ -53,6 +55,7 @@ export default function SkillsSection() {
                             <div className="flex flex-nowrap gap-4 md:gap-6 min-w-max">
                                 <SiHtml5 className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiCss3 className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
+                                <RiTailwindCssFill className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiJavascript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiReact className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiTypescript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
