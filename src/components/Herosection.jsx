@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HeroSection() {
+export default function HeroSection({ scrollToProjects }) {
   return (
     <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
       {/* Red glow effect */}
@@ -18,7 +18,9 @@ export default function HeroSection() {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="px-8 py-3 bg-red-400 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-3 bg-red-400 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+              onClick={scrollToProjects}
+            >
               View Projects
             </button>
             <button className="px-8 py-3 border-2 border-red-400 text-white rounded-full font-bold hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105">
