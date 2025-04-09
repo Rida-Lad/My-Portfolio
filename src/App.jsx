@@ -1,15 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/Herosection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
-function App() {
+import ProjectsSection from './components/ProjectsSection';
+import ProjectsPage from './pages/ProjectsPage';
+export default function App() {
   return (
-<>
-<HeroSection/>
-<AboutSection/>
-<SkillsSection/>
-</>
+    <Router>
+      <Routes>
+        <Route path="/" element={
+          <>
+            <HeroSection />
+            <AboutSection />
+            <SkillsSection />
+            <ProjectsSection />
+          </>
+        } />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

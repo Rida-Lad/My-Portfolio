@@ -1,0 +1,29 @@
+[
+    {
+      "id": 3,
+      "featured": true,
+      "name": "Latest Project",
+      "description": "Most recent work with cutting-edge tech",
+      "image": "/project3.jpg",
+      "github": "https://github.com/yourusername/latest",
+      "tech": ["react", "typescript", "nextjs"]
+    },
+    {
+      "id": 2,
+      "featured": true,
+      "name": "Mid Project",
+      "description": "Intermediate stage project",
+      "image": "/project2.jpg",
+      "github": "https://github.com/yourusername/mid",
+      "tech": ["python", "django"]
+    },
+    {
+      "id": 1,
+      "featured": true,
+      "name": "Fitness App Landing Page",
+      "description": " Interactive fitness platform featuring responsive program carousels, animated UI elements, and personalized workout tracking. Built with React, Tailwind CSS, and Swiper.js.",
+      "image": "/Fitness App.png",
+      "github": "https://github.com/Rida-Lad/Fitness-app-landing-page",
+      "tech": ["ReactJs", "TailwindCSS"]
+    }
+  ]
