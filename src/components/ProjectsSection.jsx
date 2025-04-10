@@ -23,8 +23,9 @@ const ProjectsSection = React.forwardRef((props, ref) => {
                 <div className="text-center">
                     <Link
                         to="/projects"
-                        className="inline-block px-8 py-3 border-2 border-red-400 text-red-300 rounded-full"
-                    >
+                        className="inline-block px-8 py-3 border-2 border-red-400 text-red-300 rounded-full 
+                        transition-all duration-300 ease-in-out 
+                        hover:bg-red-400 hover:text-white hover:border-red-500 hover:scale-105 transform"                    >
                         View All Projects
                     </Link>
                 </div>

@@ -7,7 +7,7 @@ export default function ProjectsPage() {
     <section className="bg-black text-white min-h-screen py-20 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         <h1 style={{fontFamily:'Poppins'}} className="text-4xl md:text-6xl font-bold mb-10 text-center bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
-          PROJECT ARCHIVE
+          PROJECTS ARCHIVE
         </h1>
         
         {/* Grid sorted by newest first */}

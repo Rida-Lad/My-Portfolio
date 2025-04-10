@@ -18,12 +18,12 @@ export default function HeroSection({ scrollToProjects }) {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center gap-6">
-            <button className="px-8 py-3 bg-red-400 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105"
+            <button className="px-8 py-3 bg-red-400 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               onClick={scrollToProjects}
             >
               View Projects
             </button>
-            <button className="px-8 py-3 border-2 border-red-400 text-white rounded-full font-bold hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105">
+            <button className="px-8 py-3 border-2 border-red-400 text-white rounded-full font-bold hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer">
               Download CV
             </button>
           </div>
