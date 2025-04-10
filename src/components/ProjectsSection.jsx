@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsSection = React.forwardRef((props, ref) => {
     return (
-        <section ref={ref} className=" bg-black text-white py-20 px-6 md:px-12 relative overflow-hidden">
+        <section id='projects' ref={ref} className=" bg-black text-white py-20 px-6 md:px-12 relative overflow-hidden">
             <div className="max-w-6xl mx-auto relative z-10">
                 <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
                     FEATURED WORK

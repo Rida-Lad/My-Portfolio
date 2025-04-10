@@ -1,5 +1,21 @@
 [
     {
+      "id":5,
+      "featured": true,
+      "name": "Memory-Card-Game",
+      "description":"An interactive memory card game with cosmic visuals, multiple game modes, and adaptive AI. Built with React, Tailwind, and Vite.",
+      "github":"https://github.com/Rida-Lad/Memory-Card-Game",
+      "tech": ["ReactJs", "TailwindCSS"]
+    },
+    {
+      "id": 4,
+      "featured": true,
+      "name": "NFT-SHOP-LANDING-PAGE",
+      "description": "NFT marketplace built with React and Tailwind CSS. It offers a sleek interface for discovering trading digital collectibles with features, interactive NFT showcases, and responsive design.",
+      "github":"https://github.com/Rida-Lad/NFT-SHOP-LANDING-PAGE",
+      "tech": ["ReactJs", "TailwindCSS"]
+    },
+    {
       "id": 3,
       "featured": true,
       "name": "EBook Store Landing Page",
