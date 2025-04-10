@@ -5,7 +5,6 @@ import {
     SiJavascript,
     SiReact,
     SiTypescript,
-    SiNextdotjs,
     SiPython,
     SiNodedotjs,
     SiExpress,
@@ -59,7 +58,6 @@ export default function SkillsSection() {
                                 <SiJavascript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiReact className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiTypescript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
-                                <SiNextdotjs className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                             </div>
                         </div>
                     </div>
