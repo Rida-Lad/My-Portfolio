@@ -3,12 +3,14 @@ import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { SiGmail } from 'react-icons/si';
 
 export default function ContactSection() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <section className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
+    <section className="bg-black text-white min-h-screen flex flex-col justify-between py-20 px-6 md:px-12 relative overflow-hidden">
       {/* Red glow effect */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-40 blur-3xl rounded-full"></div>
 
-      <div className="max-w-6xl mx-auto w-full relative z-10 text-center">
+      <div className="max-w-6xl mx-auto w-full relative z-10 text-center flex-1 flex flex-col justify-center">
         <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
           GET IN TOUCH
         </h2>
@@ -31,6 +33,18 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="relative z-10 border-t border-white/10 mt-20 pt-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-400 text-sm">
+            © {currentYear} RIDA LADIB. Crafted with passion using React & Tailwind
+          </p>
+          <p className="text-gray-500 text-xs mt-2">
+            Committed to excellence in every pixel
+          </p>
+        </div>
+      </footer>
     </section>
   );
 }
