@@ -26,8 +26,8 @@ const HeroSection = forwardRef(({ scrollToProjects }, ref) => {
             transition={{ delay: 0.4, duration: 1 }}
             className="flex items-center justify-center mb-12"
           >
-            <p 
-              style={{ fontFamily: 'Cinzel' }} 
+            <p
+              style={{ fontFamily: 'Cinzel' }}
               className="text-3xl md:text-5xl block text-transparent bg-clip-text bg-gradient-to-r from-white to-red-600 font-medium"
             >
               WEB DEVELOPER & DATA ANALYST
@@ -41,15 +41,20 @@ const HeroSection = forwardRef(({ scrollToProjects }, ref) => {
             transition={{ delay: 0.8, duration: 0.6 }}
             className="flex flex-wrap justify-center gap-6"
           >
-            <button 
+            <button
               className="px-8 py-3 bg-red-400 text-white rounded-full font-bold hover:bg-red-500 transition-all duration-300 transform hover:scale-105 cursor-pointer"
               onClick={scrollToProjects}
             >
               View Projects
             </button>
-            <button className="px-8 py-3 border-2 border-red-400 text-white rounded-full font-bold hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer">
-              Download CV
-            </button>
+            <a
+              href="/files/RIDA_CV.pdf"  
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border-2 border-red-400 text-white rounded-full font-bold hover:bg-red-400 hover:text-white transition-all duration-300 transform hover:scale-105 cursor-pointer"
+            >
+              View CV
+            </a>
           </motion.div>
         </div>
 
@@ -65,7 +70,7 @@ const HeroSection = forwardRef(({ scrollToProjects }, ref) => {
               key={text}
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ 
+              transition={{
                 delay: 1.4 + index * 0.2,
                 type: 'spring',
                 stiffness: 100
