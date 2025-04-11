@@ -45,15 +45,15 @@ const Navbar = ({ sectionRefs }) => {
   return (
     <nav 
       ref={navRef}
-      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/50 backdrop-blur-md rounded-full p-2 flex gap-4 border border-white/10 z-50"
+      className="fixed bottom-8 left-1/2 transform -translate-x-1/2 bg-black/5 backdrop-blur-md rounded-full p-2 flex gap-4 border border-white/10 z-50"
     >
       {sections.map((section, index) => (
         <button
           key={section.id}
           onClick={() => scrollToSection(sectionRefs[index])}
-          className={`p-3 rounded-full hover:text-red-400 transition-all ${
+          className={`p-3 rounded-full hover:text-red-400 transition-all cursor-pointer ${
             activeSection === index 
-              ? 'bg-gradient-to-r from-red-600 to-red-400 text-white' 
+              ? 'bg-gradient-to-r from-red-600 to-red-400 text-white hover:text-white ' 
               : 'text-gray-400'
           }`}
         >

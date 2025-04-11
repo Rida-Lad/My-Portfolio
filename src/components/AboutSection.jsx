@@ -1,8 +1,9 @@
 import React from 'react';
+import { forwardRef } from 'react';
 
-export default function AboutSection() {
+const AboutSection = forwardRef((props, ref) => {
   return (
-    <section id="about" className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
+    <section ref={ref} id="about" className="bg-black text-white min-h-screen flex items-center py-20 px-6 md:px-12 relative overflow-hidden">
       {/* Red glow effect */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-40 blur-3xl rounded-full"></div>
 
@@ -74,4 +75,5 @@ export default function AboutSection() {
       </div>
     </section>
   );
-}
+});
+export default AboutSection;
