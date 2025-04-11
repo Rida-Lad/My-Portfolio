@@ -40,7 +40,7 @@
     <td>
       • Smooth scroll navigation with scrollspy<br>
       • Animated project cards with hover effects<br>
-      • Dynamic contact section with form validation<br>
+      • Dynamic contact section<br>
       • Particle.js background effects
     </td>
   </tr>
@@ -48,9 +48,8 @@
     <td>✅ <b>Sections</b></td>
     <td>
       • Hero section with glowing text effects and CTA<br>
-      • Skills showcase with technology stack and progress bars<br>
+      • Skills showcase with technology stack<br>
       • Project gallery with filterable categories and case studies<br>
-      • Testimonials carousel<br>
       • Contact form with social media integration
     </td>
   </tr>
@@ -192,8 +191,8 @@ Enable automatic deployments by configuring Netlify to:
 
 <div align="center">
   
-- Icons provided by [React Icons](https://react-icons.github.io/react-icons/)
-- Animations powered by [Framer Motion](https://www.framer.com/motion/)
+- Icons provided by<a href="https://react-icons.github.io/react-icons/"><img src="https://img.shields.io/badge/-React_Icons-61DAFB?style=flat&logo=react&logoColor=black" alt="React Icons"></a> 
+- Animations powered by  <a href="https://www.framer.com/motion/"><img src="https://img.shields.io/badge/-Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white" alt="Framer Motion"></a>
 - Inspired by modern design trends and developer portfolios
 
 </div>
