@@ -186,12 +186,6 @@ Enable automatic deployments by configuring Netlify to:
 - Run build checks before deployment
 </details>
 
-## 🔧 Performance Optimization
-
-> - Images are optimized and lazy-loaded
-> - Code splitting implemented with React.lazy()
-> - Critical CSS inlined for faster initial load
-> - PWA ready with service worker support
 
 
 ## 🙏 Acknowledgments
