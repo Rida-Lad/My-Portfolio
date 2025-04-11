@@ -4,7 +4,6 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
 [![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://www.netlify.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 A modern, responsive portfolio website showcasing professional skills, projects, and contact information. Built with cutting-edge technologies and featuring smooth animations for an engaging user experience.
 
@@ -139,36 +138,6 @@ Enable automatic deployments by configuring Netlify to:
 - Code splitting implemented with React.lazy()
 - Critical CSS inlined for faster initial load
 - PWA ready with service worker support
-
-## 📱 PWA Support
-
-This portfolio can be installed as a Progressive Web App:
-
-1. Enable in `vite.config.js`:
-   ```javascript
-   // vite.config.js
-   import { VitePWA } from 'vite-plugin-pwa'
-
-   export default {
-     plugins: [
-       // Other plugins...
-       VitePWA({
-         registerType: 'autoUpdate',
-         manifest: {
-           name: 'Your Portfolio',
-           short_name: 'Portfolio',
-           theme_color: '#dc2626',
-           icons: [/* Your icons here */]
-         }
-       })
-     ]
-   }
-   ```
-
-2. Install additional dependency:
-   ```bash
-   npm install vite-plugin-pwa -D
-   ```
 
 
 ## 🙏 Acknowledgments
