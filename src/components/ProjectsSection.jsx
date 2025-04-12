@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsSection = React.forwardRef((props, ref) => {
     return (
-        <section id="projects"  ref={ref} className=" bg-black text-white py-20 px-6 md:px-12 relative overflow-hidden">
+        <section id="projects" ref={ref} className=" bg-black text-white py-20 px-6 md:px-12 relative overflow-hidden">
             <div className="max-w-6xl mx-auto relative z-10">
                 <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
                     FEATURED WORK
@@ -23,9 +23,10 @@ const ProjectsSection = React.forwardRef((props, ref) => {
                 <div className="text-center">
                     <Link
                         to="/projects"
+                        onClick={() => setTimeout(() => window.scrollTo(0, 0), 0)}
                         className="inline-block px-8 py-3 border-2 border-red-400 text-red-300 rounded-full 
                         transition-all duration-300 ease-in-out 
-                        hover:bg-red-400 hover:text-white hover:border-red-500 hover:scale-105 transform"                    >
+                    hover:bg-red-400 hover:text-white hover:border-red-500 hover:scale-105 transform">
                         View All Projects
                     </Link>
                 </div>
