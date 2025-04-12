@@ -9,7 +9,7 @@ const ProjectCard = ({ project }) => {
             <span
                 key={index}
                 className="px-2 py-1 text-xs bg-gradient-to-r from-red-900/30 to-red-900/10 rounded-full 
-                           backdrop-blur-sm border border-red-900/50 flex-shrink-0"
+                           border border-red-900/50 flex-shrink-0"
             >
                 {tech}
             </span>
@@ -21,11 +21,8 @@ const ProjectCard = ({ project }) => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.remove('paused');
-                    } else {
-                        entry.target.classList.add('paused');
-                    }
+                    const wrapper = entry.target;
+                    wrapper.classList.toggle('active', entry.isIntersecting);
                 });
             },
             { threshold: 0.1 }
@@ -40,13 +37,23 @@ const ProjectCard = ({ project }) => {
     return (
         <div 
             ref={animationRef}
-            className="group relative rounded-2xl bg-gradient-to-r from-red-300/40 to-transparent shadow-red-900/50 shadow-2xl"
+            className="group relative rounded-2xl overflow-hidden shadow-red-900/30 shadow-lg"
         >
+            {/* Desktop-only border animation */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
+                <div className="absolute inset-0 desktop-animation opacity-40" />
+            </div>
+
+            {/* Mobile/tablet border animation */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none md:hidden">
+                <div className="absolute inset-0 mobile-animation opacity-30" />
+            </div>
+
             {/* Card content */}
-            <div className="relative h-full bg-black/90 backdrop-blur-sm rounded-2xl p-6 m-px">
+            <div className="relative h-full bg-black/95 rounded-2xl p-6">
                 <div className="relative z-10 flex flex-col h-full">
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text 
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text 
                                   line-clamp-2 h-14 min-h-14">
                         {project.name}
                     </h3>
@@ -89,30 +96,70 @@ const ProjectCard = ({ project }) => {
             </div>
 
             <style jsx="true">{`
-                .group {
-                    position: relative;
-                    background: linear-gradient(
-                        45deg,
-                        rgba(248, 113, 113, 0.4),
-                        transparent,
-                        rgba(248, 113, 113, 0.4)
+                /* Desktop animation (>= 768px) */
+                .desktop-animation {
+                    background: conic-gradient(
+                        from 0deg,
+                        transparent 0deg,
+                        rgba(248,113,113,0.4) 180deg,
+                        transparent 360deg
                     );
-                    background-size: 200% 200%;
-                    animation: border-flow 6s linear infinite;
+                    animation: rotate 4s linear infinite;
+                    transform-origin: 50% 50%;
                 }
 
-                @keyframes border-flow {
+                /* Mobile animation (< 768px) */
+                .mobile-animation {
+                    background: linear-gradient(
+                        90deg,
+                        rgba(248,113,113,0) 0%,
+                        rgba(248,113,113,0.3) 50%,
+                        rgba(248,113,113,0) 100%
+                    );
+                    background-size: 200% auto;
+                    animation: pulse 3s linear infinite;
+                }
+
+                @keyframes rotate {
+                    100% { transform: rotate(360deg); }
+                }
+
+                @keyframes pulse {
                     0% { background-position: 200% 0; }
                     100% { background-position: -200% 0; }
                 }
 
-                .paused {
+                /* Animation control */
+                .active .desktop-animation,
+                .active .mobile-animation {
+                    animation-play-state: running;
+                }
+
+                .group:not(.active) .desktop-animation,
+                .group:not(.active) .mobile-animation {
                     animation-play-state: paused;
                 }
 
                 @media (prefers-reduced-motion: reduce) {
-                    .group {
-                        animation: none;
+                    .desktop-animation,
+                    .mobile-animation {
+                        animation: none !important;
+                    }
+                }
+
+                /* Mobile-specific optimizations */
+                @media (max-width: 767px) {
+                    .desktop-animation {
+                        display: none;
+                    }
+                    .mobile-animation {
+                        animation-duration: 4s;
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    .mobile-animation {
+                        display: none;
                     }
                 }
             `}</style>
