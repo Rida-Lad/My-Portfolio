@@ -1,4 +1,4 @@
-import React, { useRef, Suspense, lazy } from 'react';
+import React, { useRef, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
@@ -27,7 +27,6 @@ export default function App() {
         <Route path="/" element={
           <>
             <Navbar sectionRefs={sectionRefs} />
-            <Suspense fallback={<div className="loading bg-black text-center text-gray-500 mt-50">Loading Portfolio...</div>}>
               <>
                 <HeroSection 
                   ref={heroRef}
@@ -38,14 +37,11 @@ export default function App() {
                 <ProjectsSection ref={projectsRef} />
                 <ContactSection ref={contactRef} />
               </>
-            </Suspense>
           </>
         } />
         
         <Route path="/projects" element={
-          <Suspense fallback={<div className="loading bg-black text-center text-gray-500 mt-50">Loading Projects...</div>}>
             <ProjectsPage />
-          </Suspense>
         } />
       </Routes>
     </Router>
