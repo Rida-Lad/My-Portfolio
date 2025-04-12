@@ -27,7 +27,7 @@ export default function App() {
         <Route path="/" element={
           <>
             <Navbar sectionRefs={sectionRefs} />
-            <Suspense fallback={<div className="loading text-center text-gray-500 mt-10">Loading Portfolio...</div>}>
+            <Suspense fallback={<div className="loading bg-black text-center text-gray-500 mt-50">Loading Portfolio...</div>}>
               <>
                 <HeroSection 
                   ref={heroRef}
@@ -43,7 +43,7 @@ export default function App() {
         } />
         
         <Route path="/projects" element={
-          <Suspense fallback={<div className="loading text-center text-gray-500 mt-10">Loading Projects...</div>}>
+          <Suspense fallback={<div className="loading bg-black text-center text-gray-500 mt-50">Loading Projects...</div>}>
             <ProjectsPage />
           </Suspense>
         } />
