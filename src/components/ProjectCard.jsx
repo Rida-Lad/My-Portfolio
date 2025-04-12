@@ -1,6 +1,9 @@
 import React from 'react';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = React.memo(({ project }) => {
+    React.useEffect(() => {
+        console.log('ProjectCard rendered:', project.id);
+    }, [project.id]);
     const techStackElements = project.tech.map((tech, index) => (
         <span
             key={index}
@@ -10,9 +13,9 @@ const ProjectCard = ({ project }) => {
             {tech}
         </span>
     ));
-    
+
     return (
-        <div 
+        <div
             className="group relative p-px overflow-hidden rounded-2xl transition-all duration-300 shadow-red-900/50 shadow-2xl"
         >
             {/* Animated gradient background */}
@@ -89,6 +92,10 @@ const ProjectCard = ({ project }) => {
             `}</style>
         </div>
     );
-};
+}, (prevProps, nextProps) => {
+    // Custom comparison function
+    return prevProps.project.id === nextProps.project.id;
+});
+
 
 export default ProjectCard;
