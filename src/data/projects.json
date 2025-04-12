@@ -1,42 +1,85 @@
 [
-    {
-      "id":5,
-      "featured": true,
-      "name": "Memory-Card-Game",
-      "description":"An interactive memory card game with cosmic visuals, multiple game modes, and adaptive AI. Built with React, Tailwind, and Vite.",
-      "github":"https://github.com/Rida-Lad/Memory-Card-Game",
-      "tech": ["ReactJs", "TailwindCSS"]
-    },
-    {
-      "id": 4,
-      "featured": true,
-      "name": "NFT-SHOP-LANDING-PAGE",
-      "description": "NFT marketplace built with React and Tailwind CSS. It offers a sleek interface for discovering trading digital collectibles with features, interactive NFT showcases, and responsive design.",
-      "github":"https://github.com/Rida-Lad/NFT-SHOP-LANDING-PAGE",
-      "tech": ["ReactJs", "TailwindCSS"]
-    },
-    {
-      "id": 3,
-      "featured": true,
-      "name": "EBook Store Landing Page",
-      "description": "Modern e-book store featuring a responsive bestsellers carousel with seamless mobile/desktop experience. Built with React, Tailwind CSS, and Lucide icons.",
-      "github": "https://github.com/Rida-Lad/E-BookStore",
-      "tech": ["ReactJs", "TailwindCSS"]
-    },
-    {
-      "id": 2,
-      "featured": true,
-      "name": "Interactive Presentation on SARL",
-      "description": "Interactive React-based presentation on SARL business structures in Morocco, featuring animated transitions, responsive design, and professional data visualization.",
-      "github": "https://github.com/Rida-Lad/Presentation-SARL-Slides-React_JS",
-      "tech": ["ReactJs", "TailwindCSS"]
-    },
-    {
-      "id": 1,
-      "featured": true,
-      "name": "Fitness App Landing Page",
-      "description": " Interactive fitness platform featuring responsive program carousels, animated UI elements, and personalized workout tracking. Built with React, Tailwind CSS, and Swiper.js.",
-      "github": "https://github.com/Rida-Lad/Fitness-app-landing-page",
-      "tech": ["ReactJs", "TailwindCSS"]
-    }
-  ]
+  {
+    "id": 7,
+    "featured": true,
+    "name": "Ads Board Moroccan Handicrafts Backend",
+    "description": "Node.js and Express backend for a Moroccan handicrafts ads board. Image uploads with Multer, MySQL integration, RESTful routes for ad management and admin stats.",
+    "github": "https://github.com/Rida-Lad/Classified-Ads-Board-Moroccan-Handicrafts-Frontend",
+    "tech": [
+      "ExpressJs",
+      "NodeJs",
+      "Multer",
+      "Cors",
+      "Mysql2",
+      "Nodemon"
+    ]
+  },
+  {
+    "id": 6,
+    "featured": false,
+    "name": "Ads Board Moroccan Handicrafts Frontend",
+    "description": "A React.js-based classified ads platform for Moroccan handicrafts, allowing visitors to create, view, manage, and delete ads without authentication. Fully responsive.",
+    "github": "https://github.com/Rida-Lad/Classified-Ads-Board-Moroccan-Handicrafts-Frontend",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS",
+      "Axios",
+      "React-Router-Dom"
+    ]
+  },
+  {
+    "id": 5,
+    "featured": true,
+    "name": "Memory Card Game",
+    "description": "An interactive memory card game with cosmic visuals, multiple game modes, and adaptive AI. Built with React, Tailwind, and Vite.",
+    "github": "https://github.com/Rida-Lad/Memory-Card-Game",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "id": 4,
+    "featured": true,
+    "name": "NFT SHOP LANDING PAGE",
+    "description": "NFT marketplace built with React and Tailwind CSS. It offers a sleek interface for discovering trading digital collectibles with features, interactive NFT showcases, and responsive design.",
+    "github": "https://github.com/Rida-Lad/NFT-SHOP-LANDING-PAGE",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "id": 3,
+    "featured": false,
+    "name": "EBook Store Landing Page",
+    "description": "Modern e-book store featuring a responsive bestsellers carousel with seamless mobile/desktop experience. Built with React, Tailwind CSS, and Lucide icons.",
+    "github": "https://github.com/Rida-Lad/E-BookStore",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "id": 2,
+    "featured": false,
+    "name": "Interactive Presentation on SARL",
+    "description": "Interactive React-based presentation on SARL business structures in Morocco, featuring animated transitions, responsive design, and professional data visualization.",
+    "github": "https://github.com/Rida-Lad/Presentation-SARL-Slides-React_JS",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "id": 1,
+    "featured": false,
+    "name": "Fitness App Landing Page",
+    "description": " Interactive fitness platform featuring responsive program carousels, animated UI elements, and personalized workout tracking. Built with React, Tailwind CSS, and Swiper.js.",
+    "github": "https://github.com/Rida-Lad/Fitness-app-landing-page",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS"
+    ]
+  }
+]
