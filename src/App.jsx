@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import HeroSection from './components/Herosection';
-import AboutSection from './components/AboutSection';
-import SkillsSection from './components/SkillsSection';
-import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
-import ProjectsPage from './pages/ProjectsPage';
+
+// Lazy-loaded components
+const HeroSection = lazy(() => import('./components/Herosection'));
+const AboutSection = lazy(() => import('./components/AboutSection'));
+const SkillsSection = lazy(() => import('./components/SkillsSection'));
+const ProjectsSection = lazy(() => import('./components/ProjectsSection'));
+const ContactSection = lazy(() => import('./components/ContactSection'));
+const ProjectsPage = lazy(() => import('./pages/ProjectsPage'));
 
 export default function App() {
   // Create refs for all sections
@@ -25,20 +27,26 @@ export default function App() {
         <Route path="/" element={
           <>
             <Navbar sectionRefs={sectionRefs} />
-            
-            <HeroSection 
-              ref={heroRef}
-              scrollToProjects={() => projectsRef.current?.scrollIntoView({ behavior: 'smooth' })}
-            />
-            
-            <AboutSection ref={aboutRef} />
-            <SkillsSection ref={skillsRef} />
-            <ProjectsSection ref={projectsRef} />
-            <ContactSection ref={contactRef} />
+            <Suspense fallback={<div className="loading">Loading Portfolio...</div>}>
+              <>
+                <HeroSection 
+                  ref={heroRef}
+                  scrollToProjects={() => projectsRef.current?.scrollIntoView({ behavior: 'smooth' })}
+                />
+                <AboutSection ref={aboutRef} />
+                <SkillsSection ref={skillsRef} />
+                <ProjectsSection ref={projectsRef} />
+                <ContactSection ref={contactRef} />
+              </>
+            </Suspense>
           </>
         } />
         
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects" element={
+          <Suspense fallback={<div className="loading">Loading Projects...</div>}>
+            <ProjectsPage />
+          </Suspense>
+        } />
       </Routes>
     </Router>
   );
