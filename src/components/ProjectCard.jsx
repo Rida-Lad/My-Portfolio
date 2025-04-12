@@ -2,8 +2,30 @@ import React, { useState, useEffect } from 'react';
 
 const ProjectCard = React.memo(({ project }) => {
     const [isVisible, setIsVisible] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+    const [reduceMotion, setReduceMotion] = useState(false);
 
-    // Intersection Observer for lazy-rendering
+    // Detect viewport and motion preferences
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(min-width: 768px)');
+        const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const handleResize = (e) => setIsDesktop(e.matches);
+        const handleMotionChange = (e) => setReduceMotion(e.matches);
+
+        setIsDesktop(mediaQuery.matches);
+        setReduceMotion(motionQuery.matches);
+
+        mediaQuery.addEventListener('change', handleResize);
+        motionQuery.addEventListener('change', handleMotionChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleResize);
+            motionQuery.removeEventListener('change', handleMotionChange);
+        };
+    }, []);
+
+    // Lazy loading with Intersection Observer
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -23,7 +45,7 @@ const ProjectCard = React.memo(({ project }) => {
         };
     }, [project.id]);
 
-    // Simplified tech stack rendering
+    // Optimized tech stack rendering
     const techStackElements = project.tech.slice(0, 5).map((tech) => (
         <span
             key={tech}
@@ -40,14 +62,21 @@ const ProjectCard = React.memo(({ project }) => {
             id={`project-card-${project.id}`}
             className="group relative p-px overflow-hidden rounded-2xl shadow-red-900/50 shadow-2xl"
             style={{
-                transform: 'translateZ(0)', // Promote to GPU layer
-                willChange: 'transform', // Hint browser about animation
+                transform: 'translateZ(0)',
+                willChange: 'transform',
             }}
         >
-            {/* Simplified gradient background */}
+            {/* Conditional Desktop Animation */}
+            {isDesktop && !reduceMotion && (
+                <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-transparent to-red-300 opacity-40 transition-opacity duration-300">
+                    <div className="absolute -top-[50%] -left-[50%] w-[200%] h-[200%] animate-border-rotate bg-[conic-gradient(from_0deg,transparent_0_,theme(colors.red.600)_25%,transparent_50%)]"></div>
+                </div>
+            )}
+
+            {/* Mobile-optimized Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black/50" />
 
-            {/* Card content */}
+            {/* Card Content */}
             <div className="relative h-full bg-black/95 rounded-2xl p-6">
                 <div className="flex flex-col h-full">
                     <h3 className="text-2xl font-bold mb-2 text-red-400 line-clamp-2 h-14">
@@ -86,6 +115,26 @@ const ProjectCard = React.memo(({ project }) => {
                     </div>
                 </div>
             </div>
+
+            {/* Animation Styles */}
+            <style jsx="true">{`
+                @keyframes border-rotate {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+
+                @media (min-width: 768px) {
+                    .animate-border-rotate {
+                        animation: border-rotate 3s linear infinite;
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+                    .animate-border-rotate {
+                        animation: none !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 }, (prevProps, nextProps) => prevProps.project.id === nextProps.project.id);
