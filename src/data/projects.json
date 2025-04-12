@@ -24,7 +24,9 @@
       "ReactJs",
       "TailwindCSS",
       "Axios",
-      "React-Router-Dom"
+      "React-Router-Dom",
+      "Chart.js",
+      "React-Chartjs-2"
     ]
   },
   {
@@ -35,7 +37,9 @@
     "github": "https://github.com/Rida-Lad/Memory-Card-Game",
     "tech": [
       "ReactJs",
-      "TailwindCSS"
+      "TailwindCSS",
+      "Lucide-React",
+      "React-Router-Dom"
     ]
   },
   {
@@ -46,7 +50,11 @@
     "github": "https://github.com/Rida-Lad/NFT-SHOP-LANDING-PAGE",
     "tech": [
       "ReactJs",
-      "TailwindCSS"
+      "TailwindCSS",
+      "Framer Motion",
+      "React-Slick", 
+      "React Icons",
+      "Lucide-React"
     ]
   },
   {
@@ -57,7 +65,11 @@
     "github": "https://github.com/Rida-Lad/E-BookStore",
     "tech": [
       "ReactJs",
-      "TailwindCSS"
+      "TailwindCSS",
+      "Framer Motion",
+      "Lucide-React",
+      "React Icons",
+      "Swiper"
     ]
   },
   {
@@ -68,7 +80,13 @@
     "github": "https://github.com/Rida-Lad/Presentation-SARL-Slides-React_JS",
     "tech": [
       "ReactJs",
-      "TailwindCSS"
+      "TailwindCSS",
+      "Bootstrap",
+      "Chart.js",
+      "Chartjs-2",
+      "React-Icons",
+      "React-Intersection-Observer",  
+      "React Icons"
     ]
   },
   {
@@ -79,7 +97,9 @@
     "github": "https://github.com/Rida-Lad/Fitness-app-landing-page",
     "tech": [
       "ReactJs",
-      "TailwindCSS"
+      "TailwindCSS",
+      "Lucide-React",
+      "Swiper"
     ]
   }
 ]
