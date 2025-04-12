@@ -14,9 +14,6 @@ const ProjectsSection = React.forwardRef((props, ref) => {
         setTimeout(() => window.scrollTo(0, 0), 0);
     }, []);
 
-    // React.useEffect(() => {
-    //     console.log("ProjectsSection mounted/updated");
-    // }, [featuredProjects]); // Only re-run when featuredProjects changes
 
     return (
         <section id="projects" ref={ref} className="bg-black text-white py-20 px-6 md:px-12 relative overflow-hidden">

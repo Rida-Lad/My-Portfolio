@@ -1,58 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ProjectCard = React.memo(({ project }) => {
-    React.useEffect(() => {
-        console.log('ProjectCard rendered:', project.id);
+    const [isVisible, setIsVisible] = useState(false);
+
+    // Intersection Observer for lazy-rendering
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.unobserve(entry.target);
+                }
+            },
+            { rootMargin: '50px 0px 50px 0px' }
+        );
+
+        const cardElement = document.getElementById(`project-card-${project.id}`);
+        if (cardElement) observer.observe(cardElement);
+
+        return () => {
+            if (cardElement) observer.unobserve(cardElement);
+        };
     }, [project.id]);
-    const techStackElements = project.tech.map((tech, index) => (
+
+    // Simplified tech stack rendering
+    const techStackElements = project.tech.slice(0, 5).map((tech) => (
         <span
-            key={index}
-            className="px-2 py-1 text-xs bg-gradient-to-r from-red-900/30 to-red-900/10 rounded-full 
-                       backdrop-blur-sm border border-red-900/50 flex-shrink-0"
+            key={tech}
+            className="px-2 py-1 text-xs bg-red-900/30 rounded-full border border-red-900/50 flex-shrink-0"
         >
             {tech}
         </span>
     ));
 
+    if (!isVisible) return <div id={`project-card-${project.id}`} className="h-[450px]" />;
+
     return (
         <div
-            className="group relative p-px overflow-hidden rounded-2xl transition-all duration-300 shadow-red-900/50 shadow-2xl"
+            id={`project-card-${project.id}`}
+            className="group relative p-px overflow-hidden rounded-2xl shadow-red-900/50 shadow-2xl"
+            style={{
+                transform: 'translateZ(0)', // Promote to GPU layer
+                willChange: 'transform', // Hint browser about animation
+            }}
         >
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-transparent to-red-300 opacity-40 transition-opacity duration-300 gradient-container">
-                <div className="absolute -top-[50%] -left-[50%] w-[200%] h-[200%] animate-border-rotate bg-[conic-gradient(from_0deg,transparent_0_,theme(colors.red.600)_25%,transparent_50%)]"></div>
-            </div>
+            {/* Simplified gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black/50" />
 
             {/* Card content */}
-            <div className="relative h-full bg-black/90 backdrop-blur-sm rounded-2xl p-6">
-                {/* Content */}
-                <div className="relative z-10 flex flex-col h-full">
-                    {/* Title with fixed 2-line height */}
-                    <h3 className="text-2xl font-bold mb-2 bg-gradient-to-r from-red-400 to-red-400 text-transparent bg-clip-text 
-                                  line-clamp-2 h-14 min-h-14">
+            <div className="relative h-full bg-black/95 rounded-2xl p-6">
+                <div className="flex flex-col h-full">
+                    <h3 className="text-2xl font-bold mb-2 text-red-400 line-clamp-2 h-14">
                         {project.name}
                     </h3>
 
-                    {/* Description with fixed 4-line height */}
-                    <p className="text-gray-400 mb-4 line-clamp-4 h-24 min-h-24">
+                    <p className="text-gray-400 mb-4 line-clamp-4 h-24">
                         {project.description}
                     </p>
 
-                    {/* Tech stack with dynamic 2-row wrapping */}
-                    <div className="flex flex-wrap gap-2 mb-6 overflow-hidden">
+                    <div className="flex flex-wrap gap-2 mb-6 max-h-20 overflow-hidden">
                         {techStackElements}
                     </div>
 
-                    {/* GitHub link */}
                     <div className="mt-auto">
                         <a
                             href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 text-red-400 hover:text-red-200 transition-colors"
+                            aria-label={`View source code for ${project.name}`}
                         >
                             <svg
-                                className="w-5 h-5"
+                                className="w-5 h-5 flex-shrink-0"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -64,38 +81,13 @@ const ProjectCard = React.memo(({ project }) => {
                                     d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
                                 />
                             </svg>
-                            Source Code
+                            <span className="truncate">Source Code</span>
                         </a>
                     </div>
                 </div>
             </div>
-
-            {/* Styles remain the same */}
-            <style jsx="true">{`
-                @keyframes border-rotate {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-                .animate-border-rotate {
-                    animation: border-rotate 3s linear infinite;
-                }
-                
-                .paused .animate-border-rotate {
-                    animation-play-state: paused;
-                }
-                
-                @media (prefers-reduced-motion: reduce) {
-                    .animate-border-rotate {
-                        animation: none;
-                    }
-                }
-            `}</style>
         </div>
     );
-}, (prevProps, nextProps) => {
-    // Custom comparison function
-    return prevProps.project.id === nextProps.project.id;
-});
-
+}, (prevProps, nextProps) => prevProps.project.id === nextProps.project.id);
 
 export default ProjectCard;
