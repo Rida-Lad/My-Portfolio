@@ -24,6 +24,14 @@
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="./public/screenshots/hero-section.png" width="45%" alt="Hero Section">
+  <img src="./public/screenshots/tech.png" width="45%" alt="Tech Stack">
+  <img src="./public/screenshots/projects.png" width="50%" alt="Projects" style="margin-top: 20px">
+</div>
+
 ## ✨ Features
 
 <table>
