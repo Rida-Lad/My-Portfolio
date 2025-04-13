@@ -5,7 +5,6 @@ import {
     SiCss3,
     SiJavascript,
     SiReact,
-    SiTypescript,
     SiPython,
     SiNodedotjs,
     SiExpress,
@@ -58,7 +57,6 @@ const SkillsSection = forwardRef((props, ref) => {
                                 <RiTailwindCssFill className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiJavascript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                                 <SiReact className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
-                                <SiTypescript className="h-8 md:h-10 w-auto text-red-300 flex-shrink-0" />
                             </div>
                         </div>
                     </div>
