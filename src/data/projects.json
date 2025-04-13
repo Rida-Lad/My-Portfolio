@@ -1,5 +1,20 @@
 [
   {
+    "id": 8,
+    "featured": true,
+    "name": "Habit Tracker App",
+    "description": "A habit tracker app built with React, Tailwind CSS, and Vite. It features a user-friendly interface for tracking habits, setting goals, and visualizing progress.",
+    "github": "https://github.com/Rida-Lad/Habit_Tracker_App_V2",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS",
+      "Framer Motion",
+      "Bootstrap Icons",
+      "React-Chartjs-2",
+      "React Router-Dom"
+    ]
+  },
+  {
     "id": 7,
     "featured": true,
     "name": "Ads Board Moroccan Handicrafts Backend",
@@ -44,7 +59,7 @@
   },
   {
     "id": 4,
-    "featured": true,
+    "featured": false,
     "name": "NFT SHOP LANDING PAGE",
     "description": "NFT marketplace built with React and Tailwind CSS. It offers a sleek interface for discovering trading digital collectibles with features, interactive NFT showcases, and responsive design.",
     "github": "https://github.com/Rida-Lad/NFT-SHOP-LANDING-PAGE",
