@@ -65,7 +65,7 @@ const HeroSection = forwardRef(({ scrollToProjects }, ref) => {
           transition={{ delay: 1.2 }}
           className="flex flex-row flex-wrap items-center justify-center gap-12 mt-24"
         >
-          {[['4', 'Certifications'], ['10', 'Projects'], ['20+', 'Technologies']].map(([value, text], index) => (
+          {[['8', 'Certifications'], ['10', 'Projects'], ['20+', 'Technologies']].map(([value, text], index) => (
             <motion.div
               key={text}
               initial={{ scale: 0.9, opacity: 0 }}
