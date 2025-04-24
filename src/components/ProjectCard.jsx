@@ -61,40 +61,41 @@ const ProjectCard = React.memo(({ project }) => {
         <div
             id={`project-card-${project.id}`}
             className="group relative p-px overflow-hidden rounded-2xl shadow-red-900/50 shadow-2xl"
-            style={{
-                transform: 'translateZ(0)',
-                willChange: 'transform',
-            }}
+            style={{ transform: 'translateZ(0)', willChange: 'transform' }}
         >
-            {/* Conditional Desktop Animation */}
             {isDesktop && !reduceMotion && (
                 <div className="absolute inset-0 bg-gradient-to-r from-red-300 via-transparent to-red-300 opacity-40 transition-opacity duration-300">
                     <div className="absolute -top-[50%] -left-[50%] w-[200%] h-[200%] animate-border-rotate bg-[conic-gradient(from_0deg,transparent_0_,theme(colors.red.600)_25%,transparent_50%)]"></div>
                 </div>
             )}
 
-            {/* Mobile-optimized Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 to-black/50" />
 
-            {/* Card Content */}
             <div className="relative h-full bg-black/95 rounded-2xl p-6">
                 <div className="flex flex-col h-full">
-                    <h3 className="text-2xl font-bold mb-2 text-red-400 line-clamp-2 h-14">
+                    <h3 className="text-[1.15rem] md:text-2xl font-bold mb-2 text-red-400 line-clamp-2 h-14">
                         {project.name}
                     </h3>
 
-                    <p className="text-gray-400 mb-4 line-clamp-4 h-24">
+                    <p className="text-sm md:text-base text-gray-400 mb-4 line-clamp-4 h-24">
                         {project.description}
                     </p>
 
                     <div className="flex flex-wrap gap-2 mb-6 max-h-20 overflow-hidden">
-                        {techStackElements}
+                        {project.tech.slice(0, 5).map((tech) => (
+                            <span
+                                key={tech}
+                                className="px-2 py-1 text-[0.7rem] md:text-xs bg-red-900/30 rounded-full border border-red-900/50 flex-shrink-0"
+                            >
+                                {tech}
+                            </span>
+                        ))}
                     </div>
 
                     <div className="mt-auto">
                         <a
                             href={project.github}
-                            className="inline-flex items-center gap-2 text-red-400 hover:text-red-200 transition-colors"
+                            className="inline-flex items-center gap-2 text-sm md:text-base text-red-400 hover:text-red-200 transition-colors"
                             aria-label={`View source code for ${project.name}`}
                         >
                             <svg
@@ -116,25 +117,22 @@ const ProjectCard = React.memo(({ project }) => {
                 </div>
             </div>
 
-            {/* Animation Styles */}
             <style jsx="true">{`
-                @keyframes border-rotate {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-
-                @media (min-width: 768px) {
-                    .animate-border-rotate {
-                        animation: border-rotate 3s linear infinite;
-                    }
-                }
-
-                @media (prefers-reduced-motion: reduce) {
-                    .animate-border-rotate {
-                        animation: none !important;
-                    }
-                }
-            `}</style>
+        @keyframes border-rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @media (min-width: 768px) {
+            .animate-border-rotate {
+                animation: border-rotate 3s linear infinite;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-border-rotate {
+                animation: none !important;
+            }
+        }
+    `}</style>
         </div>
     );
 }, (prevProps, nextProps) => prevProps.project.id === nextProps.project.id);
