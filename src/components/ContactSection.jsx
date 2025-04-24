@@ -11,7 +11,7 @@ const ContactSection = forwardRef((props, ref) => {
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 bg-red-900 opacity-40 blur-3xl rounded-full"></div>
 
       <div className="max-w-6xl mx-auto w-full relative z-10 text-center flex-1 flex flex-col justify-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
+        <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-16 text-center bg-gradient-to-r from-white to-red-600 text-transparent bg-clip-text">
           GET IN TOUCH
         </h2>
 
