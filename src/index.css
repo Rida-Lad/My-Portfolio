@@ -2,3 +2,18 @@
 body{
     font-family: 'Jost';
 }
+@supports (background: radial-gradient(circle, white, transparent)) {
+    .bg-radial-gradient {
+      background: radial-gradient(
+        circle at 50% 50%,
+        rgba(239, 68, 68, 0.15) 0%,
+        transparent 60%
+      );
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .md\\:text-lg {
+      font-size: 1rem;
+    }
+  }
