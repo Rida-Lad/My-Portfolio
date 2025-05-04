@@ -1,5 +1,33 @@
 [
   {
+    "id": 10,
+    "featured": true,
+    "name": "Car Rental App Frontend",
+    "description": "React-based car dealership management system with user authentication, inventory control, and order tracking features.",
+    "github": "https://github.com/Rida-Lad/Car_Rental_App_Frontend",
+    "tech": [
+      "ReactJs",
+      "TailwindCSS",
+      "Axios",
+      "React Router-Dom"
+    ]
+  },
+  {
+    "id": 9,
+    "featured": false,
+    "name": "Car Rental App Backend",
+    "description": "Node.js and Express-based REST API for a car rental platform with MySQL integration, user authentication, image upload, and admin order control.",
+    "github": "https://github.com/Rida-Lad/Car_Rental_App_Backend",
+    "tech": [
+      "ExpressJs",
+      "ExpressSession",
+      "Multer",
+      "Mysql2",
+      "Cors",
+      "BcryptJs"
+    ]
+  },
+  {
     "id": 8,
     "featured": true,
     "name": "Habit Tracker App",
@@ -16,7 +44,7 @@
   },
   {
     "id": 7,
-    "featured": true,
+    "featured": false,
     "name": "Ads Board Moroccan Handicrafts Backend",
     "description": "Node.js and Express backend for a Moroccan handicrafts ads board. Image uploads with Multer, MySQL integration, RESTful routes for ad management and admin stats.",
     "github": "https://github.com/Rida-Lad/Classified-Ads-Board-Moroccan-Handicrafts-Frontend",
@@ -67,7 +95,7 @@
       "ReactJs",
       "TailwindCSS",
       "Framer Motion",
-      "React-Slick", 
+      "React-Slick",
       "React Icons",
       "Lucide-React"
     ]
@@ -100,7 +128,7 @@
       "Chart.js",
       "Chartjs-2",
       "React-Icons",
-      "React-Intersection-Observer",  
+      "React-Intersection-Observer",
       "React Icons"
     ]
   },
