@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiPython, SiNodedotjs, 
          SiExpress, SiDjango, SiMysql, SiMongodb, SiFigma, SiCanva, 
          SiAdobeillustrator, SiAdobephotoshop, SiBlender, SiPostman, 
-         SiGit, SiGithub, SiNpm, SiXampp } from 'react-icons/si';
+         SiGit, SiGithub, SiNpm, SiXampp, SiTypescript } from 'react-icons/si';
 import { BiLogoVisualStudio } from "react-icons/bi";
 import { DiVisualstudio } from "react-icons/di";
 import { RiTailwindCssFill } from "react-icons/ri";
@@ -23,7 +23,7 @@ const SkillsSection = forwardRef((props, ref) => {
                     {[
                         {
                             title: "Frontend Development",
-                            icons: [SiHtml5, SiCss3, RiTailwindCssFill, SiJavascript, SiReact]
+                            icons: [SiHtml5, SiCss3, RiTailwindCssFill, SiJavascript, SiReact, SiTypescript]
                         },
                         {
                             title: "Backend & Databases",
